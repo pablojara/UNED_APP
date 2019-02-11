@@ -3,7 +3,7 @@
 @section('content')
     <div class="jumbotron text-center">
         <h1>{{$title}}</h1>
-        <p> This is the UNED application created by Pablo</p>
-        <p><a class ="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role = "button">Register</a></p>
+        <p> En este portal podras encontrar informacion sobre varios vendedores locales de la zona, asi como noticias y post relacionados con sus negocios.</p>
+        <img style="width:100%" src="/storage/main_images/opera_cover.jpg">
     </div>
 @endsection

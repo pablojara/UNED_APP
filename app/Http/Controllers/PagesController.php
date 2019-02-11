@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        $title = 'Welcome to PERROVIEJO main page';
+        $title = 'Bienvenido a la asociacion de comerciantes de Opera, Madrid.';
         return view('pages.index', compact('title'));
     }
 
 
     public function about(){
-        $title = 'About us';
+        $title = 'Sobre nosotros';
         return view('pages.about', compact('title'));
     }
 
