@@ -12,9 +12,9 @@ class PagesController extends Controller
     }
 
 
-    public function about(){
+    public function news(){
         $title = 'Sobre nosotros';
-        return view('pages.about', compact('title'));
+        return view('pages.news', compact('title'));
     }
 
     public function services(){
