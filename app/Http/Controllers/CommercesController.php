@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use App\Post;
+use App\User;
 use DB;
 
 class commercesController extends Controller
@@ -32,7 +32,7 @@ class commercesController extends Controller
         //$commerces = DB::select('SELECT * FROM commerces');
         //$commerces = Post::orderBy('created_at', 'desc')->get();
 
-        $commerces = Post::orderBy('created_at', 'desc')->paginate(6);
+        $commerces = User::orderBy('created_at', 'desc')->paginate(6);
 
         return view('commerces.index')->with('commerces', $commerces);
     }

@@ -26,18 +26,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="seller" id="seller" {{ old('seller') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="seller">
-                                        {{ __('Soy un vendedor/tienda') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Dirección de correo electrónico') }}</label>
 
                             <div class="col-md-6">
@@ -50,6 +38,20 @@
                                 @endif
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+    
+                                    @if ($errors->has('name'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>

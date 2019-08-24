@@ -31,4 +31,9 @@ Route::get('/noticias', 'PagesController@news');
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
+Route::resource('commerces', 'CommercesController');
+
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::resource('profiles', 'ProfileController');
+Route::resource('profile', 'ProfileController@index');

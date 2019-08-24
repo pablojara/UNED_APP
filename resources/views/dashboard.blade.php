@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Mi Panel</div>
+                
 
                 <div class="card-body">
                     @if (session('status'))
@@ -39,6 +40,7 @@
                         </table>
                         @endif
                 </div>
+                
             </div>
         </div>
     </div>

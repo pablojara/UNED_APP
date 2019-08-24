@@ -19,7 +19,7 @@
                 <a class="nav-link" href="/noticias">NOTICIAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/posts">COMERCIOS</a>
+                <a class="nav-link" href="/commerces">COMERCIOS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/posts">PROMOCIONES</a>
@@ -50,20 +50,24 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/dashboard">
+                            {{ __('Mi panel') }}
+                        </a>
+                        <a class="dropdown-item" href="/profiles">
+                            {{ __('Editar mi perfil') }}
+                        </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             {{ __('Salir') }}
                         </a>
-                        <a class="dropdown-item" href="/dashboard">
-                            {{ __('Mi Panel') }}
-                        </a>
+
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </div>
                 </li>
-                <a href="/services/create" class="btn btn-primary">Crear Post</a>
+                <a href="/posts/create" class="btn btn-primary">Crear Post</a>
             @endguest
         </ul>
     </div>

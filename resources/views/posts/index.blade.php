@@ -7,7 +7,7 @@
             <div class="card card-body bg-light">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                        <img style="width:50%" src="/storage/cover_images/{{$post->cover_image}}">
                     </div>
                 <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                 <small>Escrito el{{$post->created_at}} por {{$post->user->name}}</small>
