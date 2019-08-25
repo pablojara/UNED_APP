@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white">
 <div class="container">
-    <a href="{{ url('/') }}"><img style="width:65%" href="{{ url('/') }}" src="/storage/main_images/opera_logo.png"></a>
+    <a href="{{ url('/') }}"><img style="width:75%" href="{{ url('/') }}" src="/storage/main_images/opera_logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,16 +16,16 @@
                 <a class="nav-link" href="/">ASOCIACIÓN <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/noticias">NOTICIAS</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/commerces">COMERCIOS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/posts">PROMOCIONES</a>
+                <a class="nav-link" href="/noticias">NOTICIAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/posts">SERVICIOS</a>
+                <a class="nav-link" href="/promociones">PROMOCIONES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/servicios">SERVICIOS</a>
             </li>
             </ul>
 

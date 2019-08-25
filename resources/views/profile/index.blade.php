@@ -7,10 +7,14 @@
             <div class="card">
                 <div class="card-header">Mi Perfil</div>
                 <h1>{{$user->name}}</h1>
-                <br><br>
+                
+                <h4>Correo electrónico</h4><div>{{$user->email}}</div>
+                <h4>Descripción</h4>
                 <div>
-                    {!!$user->email!!}
+                    {!!$user->description!!}
                 </div>
+                <h4>Ubicación</h4>
+                <div>{{$user->location}}</div>
                 <img style="width:50%" src="/storage/cover_images/{{$user->image_id}}">
                 <br><br>
                 <hr>
@@ -22,9 +26,7 @@
                 <br/>
                 <br/>
                 @endif
-                @endif
-
-                
+                @endif                
             </div>
         </div>
     </div>

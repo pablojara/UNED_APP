@@ -16,10 +16,10 @@
                     @endif
                     @if(count($posts) == 0)
                     <h2>Todavia no has creado ningun post!</h2>
-                    <a href="/services/create" class="btn btn-primary">Crear Post</a>
+                    <a href="/posts/create" class="btn btn-primary">Crear Post</a>
                     @endif
                     @if(count($posts) > 0)
-                    <a href="/services/create" class="btn btn-primary">Crear Post</a>
+                    <a href="/posts/create" class="btn btn-primary">Crear Post</a>
                     <h3>Tus Posts</h3>
                     <table class="table table-striped">
                         <tr>

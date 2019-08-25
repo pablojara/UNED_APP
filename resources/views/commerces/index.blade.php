@@ -11,13 +11,11 @@
           
                 
     @if(count($commerces) > 0)
-        @foreach ($commerces as $post)
+        @foreach ($commerces as $commerce)
         <figure class="col-md-4">
-                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg"
-                  data-size="1600x1067">
-                  <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg"
+                  <img alt="picture" src="/storage/cover_images/{{$commerce->image_id}}"
                     class="img-fluid">
-                  <h3 class="text-center my-3"><a href="/profiles/{{$post->id}}">{{$post->name}}</a></h3>
+                  <h3 class="text-center my-3"><a href="/profiles/{{$commerce->id}}">{{$commerce->name}}</a></h3>
                 </a>
         </figure>
         @endforeach

@@ -26,7 +26,9 @@ http://www.myunedapp.com:8000/
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/noticias', 'PagesController@news');
+Route::get('/noticias', 'PostsController@newsIndex');
+Route::get('/promociones', 'PostsController@promotionsIndex');
+Route::get('/servicios', 'PostsController@servicesIndex');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();

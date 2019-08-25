@@ -10,7 +10,10 @@
         <div class="form-group">
                 {{Form::label('body', 'Texto')}}
                 {{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' =>'Texto'])}}
-            </div>
+        </div>
+        <div>
+                {{Form::select('size', array('0' => 'Noticia', '1' => 'Promocion','2' => 'Servicio'))}}
+        </div>
         <div class="form-group">
                 {{Form::file('cover_image')}}
             </div>

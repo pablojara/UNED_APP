@@ -32,9 +32,49 @@ class PostsController extends Controller
         //$posts = DB::select('SELECT * FROM posts');
         //$posts = Post::orderBy('created_at', 'desc')->get();
 
-        $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        //$posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        $posts = Post::where('typeOfPost', 0)->orderBy('created_at', 'desc')->paginate(6);
 
         return view('posts.index')->with('posts', $posts);
+    }
+
+    public function newsIndex()
+    {
+        //$posts = Post::all();
+        //return $post = Post::where('title', 'Post Two')->get();
+        //$posts = DB::select('SELECT * FROM posts');
+        //$posts = Post::orderBy('created_at', 'desc')->get();
+
+        //$posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        $posts = Post::where('typeOfPost', 0)->orderBy('created_at', 'desc')->paginate(6);
+
+        return view('posts.newsIndex')->with('posts', $posts);
+    }
+
+    public function promotionsIndex()
+    {
+        //$posts = Post::all();
+        //return $post = Post::where('title', 'Post Two')->get();
+        //$posts = DB::select('SELECT * FROM posts');
+        //$posts = Post::orderBy('created_at', 'desc')->get();
+
+        //$posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        $posts = Post::where('typeOfPost', 1)->orderBy('created_at', 'desc')->paginate(6);
+
+        return view('posts.promotionsIndex')->with('posts', $posts);
+    }
+
+    public function servicesIndex()
+    {
+        //$posts = Post::all();
+        //return $post = Post::where('title', 'Post Two')->get();
+        //$posts = DB::select('SELECT * FROM posts');
+        //$posts = Post::orderBy('created_at', 'desc')->get();
+
+        //$posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        $posts = Post::where('typeOfPost', 2)->orderBy('created_at', 'desc')->paginate(6);
+
+        return view('posts.servicesIndex')->with('posts', $posts);
     }
 
     /**
@@ -85,6 +125,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->typeOfPost = $request->input('size');
         $post->cover_image = $fileNameToStore;
         $post->save();
 
@@ -157,6 +198,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->typeOfPost = $request->input('size');
         if($request->hasFile('cover_image'))
         {
             $post->cover_image = $fileNameToStore;

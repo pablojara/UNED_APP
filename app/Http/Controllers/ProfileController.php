@@ -98,6 +98,8 @@ class ProfileController extends Controller
         $user = User::find($id);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
+        $user->location = $request->input('location');
+        $user->description = $request->input('description');
         if($request->hasFile('cover_image'))
         {
             $user->image_id = $fileNameToStore;
