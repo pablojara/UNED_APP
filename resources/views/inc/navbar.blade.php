@@ -1,3 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Asociacion de Comerciantes de Opera</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="" />
+  <meta property="og:title"         content="Asociacion de Comerciantes de Opera" />
+  <meta property="og:description"   content="Asociacion de Comerciantes de Opera" />
+  <meta property="og:image"         content="" />
+  </head>
+
 <nav class="navbar navbar-expand-md navbar-light bg-white">
 <div class="container">
     <a href="{{ url('/') }}"><img style="width:75%" href="{{ url('/') }}" src="/storage/main_images/opera_logo.png"></a>
@@ -71,7 +84,45 @@
             @endguest
         </ul>
     </div>
+    
 </div>
+
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+  <div class="fb-share-button" 
+    data-href="https://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+  </div>
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+<a class="twitter-share-button"
+href="https://twitter.com/intent/tweet?text=Asociación de comerciantes de Ópera!">
+Tweet</a>
+
 </nav>
 
 <br/>
