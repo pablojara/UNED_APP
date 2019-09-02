@@ -94,7 +94,7 @@ class ProfileController extends Controller
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
         }
         
-        //Create post
+        //Create user
         $user = User::find($id);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
