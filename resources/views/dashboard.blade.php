@@ -16,7 +16,7 @@
                     @endif
                     @if(count($posts) == 0)
                     <h2>Todavia no has creado ningun tipo de contenido!</h2>
-                    <a href="/posts/create" class="btn btn-primary">Crear Post</a>
+                    <a href="/posts/create" class="btn btn-primary">Crear Contenido</a>
                     @endif
                     @if(count($posts) > 0)
                     <a href="/posts/create" class="btn btn-primary">Crear contenido</a>
