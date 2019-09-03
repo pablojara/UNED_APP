@@ -129,7 +129,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'Post Created');
     }
 
     /**

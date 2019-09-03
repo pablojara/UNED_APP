@@ -80,7 +80,7 @@
                         </form>
                     </div>
                 </li>
-                <a href="/posts/create" class="btn btn-primary">Crear Post</a>
+                <a href="/posts/create" class="btn btn-primary">Crear contenido</a>
             @endguest
         </ul>
     </div>

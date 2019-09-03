@@ -15,12 +15,12 @@
                         </div>
                     @endif
                     @if(count($posts) == 0)
-                    <h2>Todavia no has creado ningun post!</h2>
+                    <h2>Todavia no has creado ningun tipo de contenido!</h2>
                     <a href="/posts/create" class="btn btn-primary">Crear Post</a>
                     @endif
                     @if(count($posts) > 0)
-                    <a href="/posts/create" class="btn btn-primary">Crear Post</a>
-                    <h3>Tus Posts</h3>
+                    <a href="/posts/create" class="btn btn-primary">Crear contenido</a>
+                    <h3>Tu contenido</h3>
                     <table class="table table-striped">
                         <tr>
                             <th>Titulo</th>
