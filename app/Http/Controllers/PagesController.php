@@ -12,18 +12,21 @@ class PagesController extends Controller
     }
 
 
-    public function news(){
+    public function cookies(){
         $title = 'Sobre nosotros';
-        return view('pages.news', compact('title'));
+        return view('pages.cookies', compact('title'));
     }
 
-    public function services(){
-        $data = array(
-            'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'SEO']
-        );
-        return view('pages.services')->with($data);
+    public function legal(){
+
+        return view('pages.legal');
     }
+
+    public function privacy(){
+
+        return view('pages.privacy');
+    }
+
 
 }
 
