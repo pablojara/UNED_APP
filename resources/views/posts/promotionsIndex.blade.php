@@ -12,6 +12,7 @@
                 <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                 <small>Escrito el{{$post->created_at}} por {{$post->user->name}}</small>
             </div>
+        </div>
         @endforeach
         {{$posts->links()}}
     @else
